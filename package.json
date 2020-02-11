@@ -1,0 +1,23 @@
+{
+  "name": "electron-tutorial-app",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager .  electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=x64  --prune=true --out=release-builds-win",
+    "package-linux": "electron-packager .  electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64  --prune=true --out=release-builds-linux"
+  },
+
+  "keywords": [
+    "Electron",
+    "tutorial",
+    "demo"
+  ],
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "electron": "^8.0.0",
+    "electron-packager": "^14.2.1"
+  }
+}

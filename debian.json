@@ -1,0 +1,9 @@
+{
+    "dest": "release-builds-debian/",
+    "categories": [
+      "Utility"
+    ],
+    "lintianOverrides": [
+      "changelog-file-missing-in-native-package"
+    ]
+  }
