@@ -1,1 +1,4 @@
 node_modules/
+release-builds-debian/
+release-builds-win/
+release-builds-linux/

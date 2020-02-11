@@ -1,21 +1,26 @@
+
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
-    <!-- You can also require other files to run in this process -->
-
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="title">
+				账号密码登录
+			</div>
+			<div class="infor">
+				推荐使用<a href="">快速安全登录</a>,防止盗号。
+			</div>
+			<form action="" method="post" id="form"> 
+				<input type="text" class="input" placeholder="支持QQ号/邮箱/手机号登录"/>
+				<input type="text"class="input" placeholder="密码"/>
+				<button type="button" id="btn" onclick="login()">登 录</button>
+			</form>
+		</div>
+		
+	</body>
 </html>
