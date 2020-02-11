@@ -103,6 +103,7 @@ electron和electron-packager负责运行和打包原生web应用。
 安装好全部依赖后，在项目根目录执行`npm start`，将会弹出一个应用窗口。(展示作用，并非登录实际功能)
 ![win-app](https://s2.ax1x.com/2020/02/12/171TG6.png)
 退出窗口后运行`npm run-script package-win`, 将会看到项目文件夹中多出一个release-builds-linux文件夹，进入后可找到已打包好的windows可执行程序**electron-tutorial-app.exe**
+
 ![win-app](https://s2.ax1x.com/2020/02/12/1717RK.png)
 ## Linux(ubuntu)下的打包运行
 安装好全部依赖后，运行`npm run-script package-linux`，将会看到项目文件夹中多出一个release-builds-linux文件夹，此时内部的**electron-tutorial-app**为二进制文件，不可直接执行，需要再次编译将其转换为linux下的可执行程序 **.deb**格式。
@@ -138,6 +139,7 @@ electron和electron-packager负责运行和打包原生web应用。
 此时在release-builds-debian文件夹下可找到引用安装包，点击安装。
 ![linux-app](https://s2.ax1x.com/2020/02/12/171qMD.png)
 安装完成后，在应用界面找到该应用，即可跑起。
+
 ![linux-app](https://s2.ax1x.com/2020/02/12/171Lse.png)
 
 
