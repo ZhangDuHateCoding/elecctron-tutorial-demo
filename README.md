@@ -3,7 +3,9 @@
 本demo意在展示Electron运行原生web(HTML+CSS+JS或其他框架如Vue/React)项目，并可能将其打包成在windows、linux以及macOS操作系统下的可执行应用。为今后RR可视化编程工具在linux/win平台上运行提供方案。
 ## Getting Start
 Electron基于node.js环境，使用该库时请先[下载安装node.js](https://nodejs.org/en/)环境。
-安装完成后，clone本库到本地，进入项目根目录，执行`npm install`(更推荐使用`yarn`指令替代`npm`，安装依赖速度更快)。
+安装完成node环境后，clone本库到本地，进入项目根目录，执行
+**`npm install`**
+(更推荐使用`yarn`指令替代`npm`，安装依赖速度更快)。
 ## 简易项目结构
 
 ```sh
@@ -25,12 +27,12 @@ Electron基于node.js环境，使用该库时请先[下载安装node.js](https:/
 ## main.js说明
 ```js
 // 控制应用程序生命周期和创建本机浏览器窗口的模块
-const {app, BrowserWindow} = require('electron')
+const {app， BrowserWindow} = require('electron')
 const path = require('path')
 
 function createWindow () {  // 创建应用窗口主函数
   const mainWindow = new BrowserWindow({
-    width: 800, // 窗口原始宽度
+    width: 800， // 窗口原始宽度
     height: 600, // 窗口原始高度
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
@@ -105,10 +107,10 @@ electron和electron-packager负责运行和打包原生web应用。
 ## Linux(ubuntu)下的打包运行
 安装好全部依赖后，运行`npm run-script package-linux`，将会看到项目文件夹中多出一个release-builds-linux文件夹，此时内部的**electron-tutorial-app**为二进制文件，不可直接执行，需要再次编译将其转换为linux下的可执行程序 **.deb**格式。
 
-#### 1. 安装lectron-installer-debian
+#### Step 1. 安装lectron-installer-debian
 `npm install -g electron-installer-debian`或`yarn global add electron-installer-debian`
 
-#### 2. 创建配置文件debian.json
+#### Step 2. 创建配置文件debian.json
 ```
 {
   "dest": "release-builds-debian/",
@@ -124,16 +126,19 @@ electron和electron-packager负责运行和打包原生web应用。
 `dest`: **.deb**包的保存位置。
 `categories`:设置菜单中显示应用程序的类别。(可以查看应用的[可用类别](https://specifications.freedesktop.org/menu-spec/latest/apa.html))
 `lintianOverrides`:debian软件包检查器。
-#### 3. 打包应用
+#### Step 3. 打包应用
 输入指令`electron-installer-debian --src release-builds/electron-tutorial-app-linux-x64/ --arch amd64 --config debian.json`
 参数说明：
 `--src`: 指向打包程序保存应用程序的文件夹。
 `--arch`: 告诉electron-installer-debian构建哪种架构。
-`--config`:指向在步骤2中定义的配置文件。
+`--config`:指向在Step 2中定义的配置文件。
 
 在Terminal看到Successfully created package at release-builds-debian/则说明 **.deb**应用打包成功。
-
-
+![linux-app](https://s2.ax1x.com/2020/02/12/171HxO.png)
+此时在release-builds-debian文件夹下可找到引用安装包，点击安装。
+![linux-app](https://s2.ax1x.com/2020/02/12/171qMD.png)
+安装完成后，在应用界面找到该应用，即可跑起。
+![linux-app](https://s2.ax1x.com/2020/02/12/171Lse.png)
 
 
 
