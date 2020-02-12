@@ -106,9 +106,9 @@ electron和electron-packager负责运行和打包原生web应用。
 
 ![win-app](https://s2.ax1x.com/2020/02/12/1717RK.png)
 ## Linux(ubuntu)下的打包运行
-安装好全部依赖后，运行`npm run-script package-linux`，将会看到项目文件夹中多出一个release-builds-linux文件夹，此时内部的**electron-tutorial-app**为二进制文件，不可直接执行，需要再次编译将其转换为linux下的可执行程序 **.deb**格式。
+安装好全部依赖后，运行`npm run-script package-linux`，将会看到s项目文件夹中多出一个release-builds-linux文件夹，此时内部的**electron-tutorial-app**为二进制文件，不可直接执行，需要再次编译将其转换为linux下的可执行程序 **.deb**格式。
 
-#### Step 1. 安装lectron-installer-debian
+#### Step 1. 安装electron-installer-debian
 `npm install -g electron-installer-debian`或`yarn global add electron-installer-debian`
 
 #### Step 2. 创建配置文件debian.json
